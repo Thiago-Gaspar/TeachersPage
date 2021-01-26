@@ -120,7 +120,8 @@ header {
 
 span {
     background-color: var(--secondary-color);
-    padding: 2px 4px;
+    padding: 2px 8px;
+    margin-right: 4px;
     color: #2c2a2a;
     border-radius: 8px;
 }

@@ -1,3 +1,14 @@
 {
-  "teachers": [ ]
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Thiago",
+      "birth": 677980800000,
+      "schooling": "medio",
+      "format": "Presencial",
+      "services": "TI, Windows, Linux",
+      "created_at": 1611600349769
+    }
+  ]
 }
