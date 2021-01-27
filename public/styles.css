@@ -161,7 +161,8 @@ select[name="schooling"] {
     font-size: 16px;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
     width: 100%;
     padding: 8px 32px;
     background-color: var(--secondary-color);
@@ -172,4 +173,11 @@ button[type="submit"] {
     cursor: pointer;
     border-radius: 8px;
     margin-top: 32px;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
 }
