@@ -8,7 +8,7 @@
                             type="url" 
                             name="avatar_url"
                             placeholder="http://"
-                            value="{{teacher.avatar_url}}">
+                            value="{{student.avatar_url}}">
                             
                     </div>
                 </div>
@@ -20,9 +20,20 @@
                             type="text"
                             name="name" 
                             placeholder="Nome completo:"
-                            value="{{teacher.name}}">
+                            value="{{student.name}}">
                     </div>
                 </div>
+                
+                 <div class="item">
+                    <div>Email(a)</div>
+                    <div>
+                        <input 
+                            type="email"
+                            name="email" 
+                            value="{{student.email}}">
+                    </div>
+                </div>
+
 
                 <div class="item">
                     <div>Data de Nascimento</div>
@@ -30,74 +41,36 @@
                         <input 
                             type="date" 
                             name="birth"
-                            value="{{teacher.birth}}">
+                            value="{{student.birth}}">
                     </div>
                 </div>
 
                 <div class="item">
-                    <div>Escolaridade</div>
+                    <div>Ano Escolar</div>
                     <div>
-                        <select name="schooling">
-                            <option 
-                            value="med" 
-                            {% if teacher.schooling == 'med' %} selected
-                            {% endif %}>
-                            Ensino Médio Completo
-                            </option>
-                           
-                           <option 
-                            value="sup"
-                            {% if teacher.schooling == 'sup' %} selected
-                            {% endif %}
-                            >Ensino Superior Completo
-                            </option>
-                            
-                            <option 
-                            value="mest"
-                            {% if teacher.schooling == 'mest' %} selected
-                            {% endif %}>
-                            Mestrado e Doutorado
-                            </option>
+                        <select name="SchoolYear">
+                            <option value="F5">5° ano do ensino fundamental</option>
+                            <option value="F6">6° ano do ensino fundamental</option>
+                            <option value="F7">7° ano do ensino fundamental</option>
+                            <option value="F8">8° ano do ensino fundamental</option>
+                            <option value="F9">9° ano do ensino fundamental</option>
+                            <option value="M1">1° ano do ensino médio</option>
+                            <option value="M2">2° ano do ensino médio</option>
+                            <option value="M3">3° ano do ensino médio</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div>Tipo de aula</div>
+                    <div>Carga horária semanal</div>
                     <div>
-                        <span class="color">
-                            <input 
-                                type="radio" 
-                                name="format" 
-                                value="Presencial"
-                                {% if teacher.format == 'Presencial'%}
-                                checked
-                                {% endif %}>
-                                Presencial
-                                </span>
-                        <span class="color">
-                            <input 
-                                type="radio" 
-                                name="format"
-                                value="À distância"
-                                {% if teacher.format == 'À distância'%}
-                                checked
-                                {% endif %}>
-                                À Distância
-                                </span>
+                        <input 
+                            type="number" 
+                            name="workload"
+                            value="{{student.workload}}">
                     </div>
                 </div>
 
-                <div class="item">
-                    <div>Área de Atuação</div>
-                    <div>
-                        <input 
-                        type="text" 
-                        name="services" 
-                        placeholder="Informar quais matérias serão lecionadas"
-                        value="{{teacher.services}}">
-                    </div>
-                </div>
 
                 <div class="item">
                 <button type="submit">Salvar</button>

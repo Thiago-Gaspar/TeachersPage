@@ -46,7 +46,6 @@ exports.post = function(req, res) {
         let { avatar_url, name, birth, schooling, format, services } = req.body
     
         birth = Date.parse(birth)
-        const created_at = Date.now()
         const id = Number(data.students.length + 1)
     
         data.students.push({
@@ -56,8 +55,8 @@ exports.post = function(req, res) {
             birth,
             schooling,
             format,
-            services,
-            created_at
+            services
+            
         })
     
         fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
